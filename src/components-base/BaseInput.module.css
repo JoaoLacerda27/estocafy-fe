@@ -1,0 +1,107 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #373942;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  border: 2px solid #e5e7eb;
+  border-radius: 14px;
+  background: #fff;
+  transition: border 0.2s, box-shadow 0.2s;
+  padding: 0 12px;
+  min-height: 48px;
+  position: relative;
+}
+
+.inputWrapper:focus-within {
+  border-color: #c7bfff;
+  box-shadow: 0 0 0 2px #ede9fe;
+}
+
+.input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1.08rem;
+  background: transparent;
+  color: #18181b;
+  padding: 12px 0;
+  font-weight: 400;
+}
+
+.input::placeholder {
+  color: #a1a1aa;
+  opacity: 1;
+  font-weight: 400;
+}
+
+.withIcon .input {
+  padding-left: 8px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+  color: #71717a;
+  font-size: 1.1rem;
+}
+
+.eyeButton {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-left: 6px;
+  color: #a1a1aa;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  transition: color 0.2s;
+}
+.eyeButton:hover {
+  color: var(--primary);
+}
+
+.disabled {
+  background: #f4f4f5;
+  border-color: #e5e7eb;
+}
+
+.disabled .input {
+  color: #a1a1aa;
+  background: #f4f4f5;
+}
+
+.error {
+  border-color: #fb7185;
+  background: #fff1f2;
+}
+
+.error .input {
+  color: #18181b;
+}
+
+.errorIcon {
+  color: #fb7185;
+  font-weight: bold;
+  margin-left: 8px;
+  font-size: 1.1rem;
+}
+
+.errorMessage {
+  color: #fb7185;
+  font-size: 0.98rem;
+  margin-top: 2px;
+  margin-left: 2px;
+  font-weight: 400;
+} 

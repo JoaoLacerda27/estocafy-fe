@@ -1,0 +1,140 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+.left {
+  flex: 1;
+  background: var(--primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.logoFaixaWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.logoFaixa {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 120px;
+  background: var(--background);
+  z-index: 1;
+  border-radius: 0;
+  box-shadow: 0 2px 16px 0 rgba(44, 64, 149, 0.10);
+}
+.logo {
+  position: relative;
+  z-index: 2;
+  width: 340px;
+  max-width: 90%;
+  height: auto;
+}
+.slogan {
+  margin-top: 16px;
+  color: var(--blue-50);
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.sloganHidden {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.right {
+  flex: 1;
+  background: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  .left, .right {
+    width: 100%;
+    min-height: unset;
+    padding: 32px 10px;
+  }
+  .logoFaixaWrapper {
+    margin-bottom: 18px;
+  }
+  .logoFaixa {
+    height: 64px;
+  }
+  .logo {
+    width: 160px;
+    max-width: 90vw;
+  }
+  .slogan {
+    font-size: 1.05rem;
+    margin-top: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100vh;
+  }
+  .left {
+    width: 100vw;
+    min-width: 100vw;
+    max-width: 100vw;
+    height: 40vh;
+    min-height: 40vh;
+    max-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  .logoFaixaWrapper {
+    width: 100vw;
+    margin-bottom: 12px;
+  }
+  .logoFaixa {
+    height: 48px;
+    width: 100vw;
+  }
+  .logo {
+    width: 110px;
+    max-width: 80vw;
+  }
+  .slogan {
+    font-size: 0.95rem;
+    margin-top: 8px;
+  }
+  .right {
+    width: 100vw;
+    min-width: 100vw;
+    max-width: 100vw;
+    height: 60vh;
+    min-height: 60vh;
+    max-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 4vw;
+    box-sizing: border-box;
+  }
+}
+form {
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+} 
